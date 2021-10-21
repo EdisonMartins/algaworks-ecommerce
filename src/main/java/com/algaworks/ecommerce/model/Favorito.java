@@ -1,10 +1,17 @@
 package com.algaworks.ecommerce.model;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+@Getter
+@Setter
+@EqualsAndHashCode(of = {"id"})
 @Entity
 public class Favorito {
     @Id
@@ -13,20 +20,4 @@ public class Favorito {
 
     @ManyToOne(optional = false)
     private Produto produto;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Produto getProduto() {
-        return produto;
-    }
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-    }
 }
