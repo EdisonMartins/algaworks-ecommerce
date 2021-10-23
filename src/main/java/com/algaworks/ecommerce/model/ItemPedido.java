@@ -6,16 +6,17 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
 @EqualsAndHashCode(of = {"id"})
 @Entity
-public class Cliente {
-
+public class ItemPedido {
     @Id
     private Integer id;
-    private String nome;
-    private SexoCliente sexo;
-
+    private Integer pedidoId;
+    private Integer produtoId;
+    private BigDecimal precoProduto;
+    private Integer quantidade;
 }

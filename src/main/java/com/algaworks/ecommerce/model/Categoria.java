@@ -11,11 +11,12 @@ import javax.persistence.Id;
 @Setter
 @EqualsAndHashCode(of = {"id"})
 @Entity
-public class Cliente {
-
+public class Categoria {
     @Id
     private Integer id;
     private String nome;
-    private SexoCliente sexo;
+    private Integer categoriaPaiId;
+
 
 }
+

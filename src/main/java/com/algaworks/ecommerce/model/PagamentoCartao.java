@@ -11,11 +11,10 @@ import javax.persistence.Id;
 @Setter
 @EqualsAndHashCode(of = {"id"})
 @Entity
-public class Cliente {
-
+public class PagamentoCartao {
     @Id
     private Integer id;
-    private String nome;
-    private SexoCliente sexo;
-
+    private Integer pedidoId;
+    private StatusPagamento status;
+    private String numero;
 }
