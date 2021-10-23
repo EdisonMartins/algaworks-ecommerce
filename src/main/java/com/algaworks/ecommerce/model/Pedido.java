@@ -4,12 +4,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -32,4 +28,8 @@ public class Pedido {
 
     private StatusPedido status;
     private BigDecimal total;
+
+    @Embedded
+    private EnderecoEntregaPedido enderecoEntrega;
+
 }
